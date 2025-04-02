@@ -9,12 +9,12 @@ done
 # Get SideStore ipa
 printf "\nDownloading SideStore.ipa stable.\n"
 printf "=================================\n"
-curl --progress-bar -L -o SideStore.ipa $(curl -s https://api.github.com/repos/SideStore/SideStore/releases/latest | grep "browser_download_url.*SideStore.ipa*" | cut -d : -f 2,3 | tr -d \")
+curl --progress-bar -L -o SideStore.ipa https://github.com/SideStore/SideStore/releases/download/0.5.10/SideStore.ipa
 
 # Get SideStore-Nightly ipa
 printf "\nDownloading SideStore.ipa nightly.\n"
 printf "=================================\n"
-curl --progress-bar -L -o SideStore-Nightly.ipa https://github.com/SideStore/SideStore/releases/download/nightly/SideStore.ipa
+curl --progress-bar -L -o SideStore-Nightly.ipa https://github.com/SideStore/SideStore/releases/download/0.5.10/SideStore.ipa
 
 # Get udid
 udid=$(idevice_id | awk '{print $1}')
