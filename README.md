@@ -18,11 +18,7 @@ You will see your pairingfile in your home directory (ends with .mobiledevicepai
 The following will install usbmuxd and docker. Run these as a none-root user and you only have to this once. After this you only need to use the docker run command.
 
 ```bash
-sudo apt install -y usbmuxd
-curl -fsSL https://test.docker.com -o test-docker.sh
-sudo sh test-docker.sh
-sudo usermod -aG docker $USER
-docker run --rm -it -v ${PWD}/:/mnt/ -v /var/run/usbmuxd:/var/run/usbmuxd ghcr.io/sidestore/altcon
+docker run --rm -it -v ${PWD}/:/mnt/ -v /var/run/usbmuxd:/var/run/usbmuxd altcon:udhay-test
 ```
 
 ## Credit
